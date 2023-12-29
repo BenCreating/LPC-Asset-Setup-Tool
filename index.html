@@ -11,6 +11,10 @@
 
   <body>
     <div class="header">
+      <div class="button justify-self-start">
+        <label for="upload-button" class="custom-file-upload btn">Load Spritesheets</label>
+        <input type="file" multiple="multiple" accept="image/png" id="upload-button">
+      </div>
       <button type="button" id="download-button" class="justify-self-end">Download</button>
     </div>
 
@@ -21,11 +25,6 @@
       <div class="spritesheet-container">
         <canvas id="spritesheet"></canvas>
       </div>
-    </div>
-
-    <div class="attribution">
-      <button type="button" id="copy-attribution-button">Copy</button>
-      <div class="attribution-content"></div>
     </div>
   </body>
 </html>
