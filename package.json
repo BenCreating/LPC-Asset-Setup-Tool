@@ -1,0 +1,31 @@
+{
+  "name": "lpc-asset-setup-tool",
+  "version": "1.0.0",
+  "description": "A browser app for setting up [Liberated Pixel Cup](https://lpc.opengameart.org) spritesheets for use in the [LPC Spritesheet Generator](https://bencreating.github.io/LPC-Spritesheet-Generator/).",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint javascript/**/*.js local-server.js",
+    "start": "static --headers \\{\\\"Cache-Control\\\":\\\"no-cache\\\"\\}"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenCreating/LPC-Asset-Setup.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BenCreating/LPC-Asset-Setup/issues"
+  },
+  "homepage": "https://github.com/BenCreating/LPC-Asset-Setup#readme",
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-compat": "^4.2.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.5.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "node-static": "^0.7.11"
+  }
+}
