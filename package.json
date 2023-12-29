@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BenCreating/LPC-Asset-Setup.git"
+    "url": "git+https://github.com/BenCreating/LPC-Asset-Setup-Tool.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BenCreating/LPC-Asset-Setup/issues"
+    "url": "https://github.com/BenCreating/LPC-Asset-Setup-Tool/issues"
   },
-  "homepage": "https://github.com/BenCreating/LPC-Asset-Setup#readme",
+  "homepage": "https://github.com/BenCreating/LPC-Asset-Setup-Tool#readme",
   "devDependencies": {
     "eslint": "^8.56.0",
     "eslint-config-standard": "^17.1.0",
