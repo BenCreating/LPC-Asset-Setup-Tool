@@ -1,17 +1,17 @@
-import OptionController from './OptionController.js'
+import AssetOptionController from './AssetOptionController.js'
 
 export default class SetupTool {
-  optionController = new OptionController(this)
+  assetOptionController = undefined
 
   /**
    * Load the resources and setup the page
    */
   async setup() {
-    const uploadButton = document.querySelector('#upload-button')
-    uploadButton.addEventListener('change', this.upload.bind(this))
-  }
+    const sidebar = document.querySelector('.sidebar')
+    const assetOptionController = new AssetOptionController(sidebar)
+    this.assetOptionController = assetOptionController
 
-  upload(event) {
-    this.optionController.uploadImages(...event.target.files)
+    const addButton = document.querySelector('#add-button')
+    addButton.addEventListener('click', assetOptionController.addOption.bind(assetOptionController))
   }
 }

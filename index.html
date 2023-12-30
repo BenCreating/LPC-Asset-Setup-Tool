@@ -11,20 +11,32 @@
 
   <body>
     <div class="header">
-      <div class="button justify-self-start">
-        <label for="upload-button" class="custom-file-upload btn">Load Spritesheets</label>
-        <input type="file" multiple="multiple" accept="image/png" id="upload-button">
-      </div>
-      <button type="button" id="download-button" class="justify-self-end">Download</button>
+      <button type="button" id="add-button" class="justify-self-start">Add Asset</button>
     </div>
-
 
     <div class="editor">
       <div class="sidebar"></div>
 
-      <div class="spritesheet-container">
-        <canvas id="spritesheet"></canvas>
-      </div>
+      <form id="asset-form" class="hidden">
+        <label for="asset-name-input">Asset Name</label>
+        <input type="text" id="asset-name-input">
+
+        <div class="button justify-self-start">
+          <label for="upload-button" class="custom-file-upload btn">Add Spritesheets</label>
+          <input type="file" multiple="multiple" accept="image/png" id="upload-button">
+        </div>
+
+        <label for="author-input">Authors</label>
+        <textarea id="author-input"></textarea>
+
+        <label for="license-input">Licenses</label>
+        <textarea id="license-input"></textarea>
+
+        <label for="link-input">Links</label>
+        <textarea id="link-input"></textarea>
+      </form>
+
+      <div id="spritesheet-options"></div>
     </div>
   </body>
 </html>

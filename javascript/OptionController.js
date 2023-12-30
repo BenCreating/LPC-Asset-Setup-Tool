@@ -1,46 +1,25 @@
-/**
- * @typedef {import('./SetupTool').default} SetupTool
- */
-
-import ImageOption from './ImageOption.js'
-
 export default class OptionController {
-  images = []
+  options = []
+  container = undefined
+  selectedOption = undefined
 
   /**
-   * @param {SetupTool} setupTool
+   * @param {HTMLElement} container
    */
-  constructor(setupTool) {
-    this.setupTool = setupTool
-  }
-
-  uploadImages(...images) {
-    this.images.push(...images)
-    this.update()
+  constructor(container) {
+    this.container = container
   }
 
   update() {
-    const sidebar = document.querySelector('.sidebar')
-    sidebar.innerHTML = ''
-
-    this.createOptions()
-    this.buildOptionsHTML()
-  }
-
-  createOptions() {
-    this.options = this.images.map(image => new ImageOption(this, image))
-    this.selectedOption = this.options[0]
-  }
-
-  buildOptionsHTML() {
-    const sidebar = document.querySelector('.sidebar')
-
+    this.container.innerHTML = ''
     this.options.forEach(option => {
-      sidebar.appendChild(option.html())
+      this.container.appendChild(option.html())
     })
   }
 
   setSelectedOption(option) {
     this.selectedOption = option
   }
+
+  addOption() {}
 }
