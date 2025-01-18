@@ -52,10 +52,7 @@ export default class Asset {
     this.optionController.setSelectedOption(this)
   }
 
-  uploadSpritesheets(event) {
-    const images = [...event.target.files]
-    images.forEach(image => {
-      this.spritesheetOptionController.addOption(image)
-    })
+  addImage(image, imageProperties) {
+    this.spritesheetOptionController.addImage(image, imageProperties)
   }
 }

@@ -13,4 +13,11 @@ export default class SpritesheetOptionController extends OptionController {
     this.setSelectedOption(spritesheet)
     this.update()
   }
+
+  addImage(image, imageProperties) {
+    const spritesheet = new Spritesheet(this, image, imageProperties)
+    this.options.push(spritesheet)
+    this.setSelectedOption(spritesheet)
+    this.update()
+  }
 }

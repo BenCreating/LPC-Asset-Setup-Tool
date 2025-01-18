@@ -1,10 +1,14 @@
 export default class Spritesheet {
-  constructor(optionController, file) {
+  constructor(optionController, image, { name, width, height, colors }) {
     this.optionController = optionController
-    this.file = file
-  }
+    this.image = image
+    this.name = name
+    this.width = width
+    this.height = height
+    this.colors = colors
 
-  get name() { return this.file.name }
+    console.log(name, width, height, colors)
+  }
 
   /**
    * The HTML to display this option
