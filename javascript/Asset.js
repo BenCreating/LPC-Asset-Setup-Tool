@@ -10,6 +10,10 @@ export default class Asset {
     this.name = name
   }
 
+  setName(newName) {
+    this.name = newName
+  }
+
   /**
    * The HTML to display this option
    *
@@ -17,7 +21,7 @@ export default class Asset {
    */
   html() {
     const name = this.name
-    const buttonId = `option-${name}`
+    const buttonId = `option-${this.optionController.indexForAsset(this)}`
 
     const buttonContainer = document.createElement('div')
     buttonContainer.className = 'asset-button'

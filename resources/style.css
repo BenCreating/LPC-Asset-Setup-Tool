@@ -185,6 +185,7 @@ legend {
 .asset-button label {
   display: block;
   cursor: pointer;
+  color: black;
 }
 
 .asset-button label span {
@@ -202,6 +203,35 @@ legend {
 
 .asset-button {
   margin-bottom: 0.5em
+}
+
+#asset-form {
+  width: 100%;
+  padding: 0.5em;
+}
+
+.asset-form-text-input-label {
+  display: block;
+}
+
+.asset-attribution {
+  width: 100%;
+}
+
+.asset-attribution textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 5em;
+  resize: vertical;
+}
+
+.author-license-wrapper {
+  display: flex;
+  gap: 1em;
+}
+
+.flex {
+  display: flex;
 }
 
 .hidden {

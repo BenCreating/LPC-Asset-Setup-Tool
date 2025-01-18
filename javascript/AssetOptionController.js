@@ -24,6 +24,12 @@ export default class AssetOptionController extends OptionController {
     this.update()
   }
 
+  saveName(event) {
+    const name = event.target.value
+    this.selectedOption.setName(name)
+    this.update()
+  }
+
   uploadSpritesheets(event) {
     this.selectedOption.uploadSpritesheets(event)
   }
@@ -36,5 +42,9 @@ export default class AssetOptionController extends OptionController {
   updateForm() {
     const assetNameInput = document.querySelector('#asset-name-input')
     assetNameInput.value = this.selectedOption.name
+  }
+
+  indexForAsset(asset) {
+    return this.options.findIndex(option => option === asset)
   }
 }

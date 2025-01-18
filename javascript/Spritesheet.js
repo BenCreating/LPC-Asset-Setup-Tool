@@ -16,11 +16,11 @@ export default class Spritesheet {
     const buttonId = `option-${name}`
 
     const buttonContainer = document.createElement('div')
-    buttonContainer.className = 'image-button'
+    buttonContainer.className = 'spritesheet-button'
 
     const radioButton = document.createElement('input')
     radioButton.setAttribute('type', 'radio')
-    radioButton.setAttribute('name', 'image-option')
+    radioButton.setAttribute('name', 'spritesheet-option')
     radioButton.setAttribute('value', name)
     radioButton.id = buttonId
     radioButton.addEventListener('click', this.selectOption.bind(this))
